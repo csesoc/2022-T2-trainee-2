@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.MainBlock{
+    background-color: #FAFAFA;
+    width: 45%;
+    height: 775px;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 20px;
+    box-shadow: 0px 2px 8px rgba(117, 131, 142, 0.08), 0px 20px 32px rgba(52, 60, 68, 0.16);
+    display: flexbox;
+    justify-items: center;
+}
+
+.Header {
+    background-color: #4ADE80;
+    width: 100%;
+    border-radius: 20px;
+    height: 115px;
+    display: flex;
+    align-items: center;
+}
+
+.Header > h1 {
+    color: white;
+    padding-left: 20px;
+}
+
+.UploadImage {
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    margin-bottom: 27px;
+    border-radius: 100px;
+    background-color: gainsboro;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.UploadImage > p {
+    color: whitesmoke;
+}
+
+input {
+    width: 80%;
+    margin: auto;
+}
+
+.Tag {
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
