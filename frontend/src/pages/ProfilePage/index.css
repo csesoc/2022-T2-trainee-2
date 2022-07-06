@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .MainBlock{
     background-color: #FAFAFA;
     width: 45%;
@@ -14,44 +10,9 @@
     justify-items: center;
 }
 
-.Header {
-    background-color: #4ADE80;
-    width: 100%;
-    border-radius: 20px;
-    height: 115px;
-    display: flex;
-    align-items: center;
-}
-
-.Header > h1 {
-    color: white;
-    padding-left: 20px;
-}
-
-.UploadImage {
-    width: 200px;
-    height: 200px;
-    margin-top: 50px;
-    margin-bottom: 27px;
-    border-radius: 100px;
-    background-color: gainsboro;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    align-items: center;
-}
-
-.UploadImage > p {
-    color: whitesmoke;
-}
 
 input {
     width: 80%;
     margin: auto;
 }
 
-.Tag {
-    border-radius: 20px;
-    padding: 20px;
-    margin: 20px;
-}
