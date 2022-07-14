@@ -1,0 +1,12 @@
+.text {
+    margin-left: 80px;
+}
+
+.text > input {
+margin-bottom: 10px;
+font-size: large;
+padding: 15px;
+width: 87%;
+border-radius: 3px;
+border: #85949F solid 1px;
+}
