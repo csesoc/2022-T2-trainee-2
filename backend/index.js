@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 
 const main = async () => {
-    await mongoose.connect("mongodb+srv://tomcsesoc:JuAsCcaPLvQrV7Tb@cluster0.7caoyfw.mongodb.net/?retryWrites=true&w=majority");
+    await mongoose.connect("mongodb://user:user@localhost:27017");
 }
 main().catch((err) => {console.log(err)});
 
