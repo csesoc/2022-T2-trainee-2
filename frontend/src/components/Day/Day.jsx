@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './Day.module.css';
 
-export default function Day(props) {
+export default function Day({ days }) {
   return (
     <div>
       <div className={styles.dot} />
-      <p>{props.day}</p>
+      <p>{days}</p>
     </div>
   );
 }
