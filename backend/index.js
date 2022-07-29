@@ -17,11 +17,7 @@ app.use(express.json());
 
 app.post('/register', async (req, res) => {
     const user = new User({
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        age: req.body.age,
-        username: req.body.username,
-        password: req.body.password,
+        Name: req.body.firstName,
         description: req.body.description
     })
 
