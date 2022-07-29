@@ -22,7 +22,8 @@ app.post('/register', async (req, res) => {
         age: req.body.age,
         username: req.body.username,
         password: req.body.password,
-        description: req.body.description
+        description: req.body.description,
+        image: req.body.image
     })
 
     try {
@@ -47,6 +48,10 @@ app.post('/login', async (req, res) => {
     } catch (err) {
         res.status(400).json({message: err.message});
     }
+})
+
+app.get('/sayhi', (req, res)  => {
+    res.status(200).json({message: 'Hi'});
 })
 
 app.listen(8000, () => { console.log('Server is running on port 8000!') });
