@@ -1,0 +1,9 @@
+{
+  "name": "groupr",
+  "version": "0.1.0",
+  "scripts": {
+    "database": "cd backend; npm run database",
+    "backend": "cd backend; npm start",
+    "frontend": "cd frontend; npm run start"
+  }
+}
