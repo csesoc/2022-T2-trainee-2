@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.post('/register', async (req, res) => {
     const user = new User({
-        Name: req.body.firstName,
+        Name: req.body.Name,
         description: req.body.description
     })
 
@@ -31,13 +31,11 @@ app.post('/register', async (req, res) => {
 
 app.post('/login', async (req, res) => {
     try {
-        const user = await User.findOne({username: req.body.username});
+        const user = await User.findOne({Name: req.body.Name});
         if (!user) {
             res.status(404).json({message: 'User not found'});
-        } else if (user.password !== req.body.password) {
-            res.status(403).json({message: 'Password incorrect'});
         } else {
-            const {password, ...others} = user._doc;
+            const {sub, ...others} = user._doc;
             res.status(200).json(others);
         }
     } catch (err) {
