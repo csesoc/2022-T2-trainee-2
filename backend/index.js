@@ -16,10 +16,7 @@ db.once('open', () => console.log('Connected to database'));
 app.use(express.json());
 
 app.post('/register', async (req, res) => {
-    const user = new User({
-        Name: req.body.Name,
-        description: req.body.description
-    })
+    const user = new User({ ...req.body });
 
     try {
         const newUser = await user.save();
