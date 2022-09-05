@@ -5,5 +5,8 @@
     "database": "cd backend; npm run database",
     "backend": "cd backend; npm start",
     "frontend": "cd frontend; npm run start"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
   }
 }
