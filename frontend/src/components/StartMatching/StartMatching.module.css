@@ -1,11 +1,17 @@
 .StartMatching {
-    border: #85949F solid 2px;
-    font-size: larger;
-    padding: 10px 25px 10px 25px;
-    background-color: transparent;
-    color: #85949F;
-    border-radius: 100px;
-    display: block;
-    margin-right: 3em;
-    margin-left: auto;
+  border: #85949f solid 2px;
+  font-size: larger;
+  padding: 10px 25px 10px 25px;
+  background-color: transparent;
+  color: #85949f;
+  border-radius: 100px;
+  display: block;
+  margin-right: 3em;
+  margin-left: auto;
+}
+
+.StartMatching:hover {
+  background-color: #85949f;
+  color: white;
+  cursor: pointer;
 }
