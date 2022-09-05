@@ -25,6 +25,7 @@ app.post('/register', async (req, res) => {
         description: req.body.description,
         image: req.body.image
     })
+    const user = new User({ ...req.body });
 
     try {
         const newUser = await user.save();
@@ -36,13 +37,11 @@ app.post('/register', async (req, res) => {
 
 app.post('/login', async (req, res) => {
     try {
-        const user = await User.findOne({username: req.body.username});
+        const user = await User.findOne({Name: req.body.Name});
         if (!user) {
             res.status(404).json({message: 'User not found'});
-        } else if (user.password !== req.body.password) {
-            res.status(403).json({message: 'Password incorrect'});
         } else {
-            const {password, ...others} = user._doc;
+            const {sub, ...others} = user._doc;
             res.status(200).json(others);
         }
     } catch (err) {
@@ -53,5 +52,4 @@ app.post('/login', async (req, res) => {
 app.get('/sayhi', (req, res)  => {
     res.status(200).json({message: 'Hi'});
 })
-
 app.listen(8000, () => { console.log('Server is running on port 8000!') });
