@@ -17,6 +17,7 @@ export default function Tags() {
     { name: 'reading' },
     { name: 'eating' },
     { name: 'sleeping' },
+    { name: 'dessert' },
   ]);
 
   const reactTags = useRef();
@@ -29,24 +30,16 @@ export default function Tags() {
   );
 
   return (
-    <>
-      <ReactTags
-        ref={reactTags}
-        tags={tags}
-        suggestions={suggestions}
-        placeholderText='Add your interests'
-        onDelete={onDelete}
-        onAddition={onAddition}
-        allowNew={true}
-        removeButtonText='x'
-        autoresize={true}
-      />
-      <p>
-        <b>Output:</b>
-      </p>
-      <pre>
-        <code>{JSON.stringify(tags, null, 2)}</code>
-      </pre>
-    </>
+    <ReactTags
+      ref={reactTags}
+      tags={tags}
+      suggestions={suggestions}
+      placeholderText='Add your interests'
+      onDelete={onDelete}
+      onAddition={onAddition}
+      allowNew={true}
+      removeButtonText='x'
+      autoresize={true}
+    />
   );
 }
