@@ -1,15 +1,52 @@
-import React from 'react';
-import Tag from '../Tag/Tag';
-import styles from './Tags.module.css';
+import React, { useCallback, useRef, useState } from 'react';
+import ReactTags from 'react-tag-autocomplete';
+// https://github.com/i-like-robots/react-tags#delimiters-optional
 
 export default function Tags() {
+  const [tags, setTags] = useState([]);
+
+  function onAddition(newTag) {
+    setTags([...tags, newTag]);
+  }
+
+  const [suggestions, setSuggestions] = useState([
+    { name: 'dance' },
+    { name: 'coding' },
+    { name: 'music' },
+    { name: 'unsw' },
+    { name: 'reading' },
+    { name: 'eating' },
+    { name: 'sleeping' },
+  ]);
+
+  const reactTags = useRef();
+
+  const onDelete = useCallback(
+    (tagIndex) => {
+      setTags(tags.filter((_, i) => i !== tagIndex));
+    },
+    [tags]
+  );
+
   return (
-    <div className={styles.Tags}>
-      <Tag name="csesoc" />
-      <Tag name="rockclimbing" />
-      <Tag name="fishing" />
-      <Tag name="COMP6080" />
-      <Tag name="badminton" />
-    </div>
+    <>
+      <ReactTags
+        ref={reactTags}
+        tags={tags}
+        suggestions={suggestions}
+        placeholderText='Add your interests'
+        onDelete={onDelete}
+        onAddition={onAddition}
+        allowNew={true}
+        removeButtonText='x'
+        autoresize={true}
+      />
+      <p>
+        <b>Output:</b>
+      </p>
+      <pre>
+        <code>{JSON.stringify(tags, null, 2)}</code>
+      </pre>
+    </>
   );
 }

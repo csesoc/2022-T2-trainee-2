@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './StartMatching.module.css';
 
-export default function StartMatching() {
+export default function StartMatching({ onSubmit }) {
   return (
-    <button type="submit" className={styles.StartMatching}>Start Matching</button>
+    <button onSubmit={onSubmit} type="submit" className={styles.StartMatching}>Start Matching</button>
   );
 }

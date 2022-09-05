@@ -1,16 +1,14 @@
 .UploadImage {
-    width: 200px;
-    height: 200px;
-    margin-top: 50px;
-    margin-bottom: 27px;
-    border-radius: 100px;
-    background-color: gainsboro;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    align-items: center;
+  width: 200px;
+  height: 200px;
+  margin-top: 50px;
+  margin-bottom: 27px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
 }
 
 .UploadImage > p {
-    color: whitesmoke;
+  color: whitesmoke;
 }

@@ -16,6 +16,15 @@ db.once('open', () => console.log('Connected to database'));
 app.use(express.json());
 
 app.post('/register', async (req, res) => {
+    const user = new User({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        age: req.body.age,
+        username: req.body.username,
+        password: req.body.password,
+        description: req.body.description,
+        image: req.body.image
+    })
     const user = new User({ ...req.body });
 
     try {
@@ -40,4 +49,7 @@ app.post('/login', async (req, res) => {
     }
 })
 
+app.get('/sayhi', (req, res)  => {
+    res.status(200).json({message: 'Hi'});
+})
 app.listen(8000, () => { console.log('Server is running on port 8000!') });
