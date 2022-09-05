@@ -1,12 +1,12 @@
 .text {
-    margin-left: 80px;
+  display: flexbox;
+  align-items: center;
 }
-
 .text > input {
-margin-bottom: 10px;
-font-size: large;
-padding: 15px;
-width: 87%;
-border-radius: 3px;
-border: #85949F solid 1px;
+  margin-bottom: 10px;
+  width: 80%;
+  font-size: medium;
+  padding: 15px;
+  border-radius: 3px;
+  border: #85949f solid 1px;
 }

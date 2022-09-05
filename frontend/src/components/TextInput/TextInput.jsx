@@ -13,8 +13,6 @@ export default function TextInput() {
       <input type='password' placeholder='Choose a secure password.' />
       <br />
       <input type='text' placeholder='Write a short bio about yourself' />
-      <br />
-      <input placeholder='What are you interests?' />
     </form>
   );
 }

@@ -35,7 +35,7 @@ export default function MainBlock() {
       />
       <TextInput />
       <Tags />
-      <WeeklyCalendar />
+      {/* <WeeklyCalendar /> */}
       <StartMatching onSubmit={onSubmit} />
     </div>
   );
