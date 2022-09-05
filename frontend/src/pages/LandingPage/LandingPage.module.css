@@ -11,6 +11,21 @@
   justify-items: center;
 }
 
+.text {
+  margin-bottom: 10px;
+  width: 80%;
+  font-size: medium;
+  padding: 15px;
+  border-radius: 3px;
+  border: #85949f solid 1px;
+  margin-left: 60px;
+}
+
+.text:focus {
+  outline: none;
+  border: #85949f solid 2px;
+}
+
 .Button {
   border: #85949f solid 2px;
   font-size: larger;
