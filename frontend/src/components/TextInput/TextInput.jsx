@@ -1,18 +1,41 @@
 import React from 'react';
 import styles from './TextInput.module.css';
+import Tags from '../Tags/Tags';
 
 export default function TextInput() {
   return (
-    <form className={styles.text}>
-      <input type='text' placeholder='What is your first name?' />
+    <form>
+      <input
+        className={styles.text}
+        type='text'
+        placeholder='What is your first name?'
+      />
       <br />
-      <input type='text' placeholder='What is your last name?' />
+      <input
+        className={styles.text}
+        type='text'
+        placeholder='What is your last name?'
+      />
       <br />
-      <input type='number' min='13' placeholder='How old are you?' />
+      <input
+        className={styles.text}
+        type='number'
+        min='13'
+        placeholder='How old are you?'
+      />
       <br />
-      <input type='password' placeholder='Choose a secure password.' />
+      <input
+        className={styles.text}
+        type='password'
+        placeholder='Choose a secure password.'
+      />
       <br />
-      <input type='text' placeholder='Write a short bio about yourself' />
+      <input
+        className={styles.text}
+        type='text'
+        placeholder='Write a short bio about yourself'
+      />
+      <Tags />
     </form>
   );
 }

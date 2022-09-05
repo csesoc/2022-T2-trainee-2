@@ -10,12 +10,13 @@ export default function Tags() {
   }
 
   const [suggestions, setSuggestions] = useState([
-    { id: 1, name: 'dance' },
-    { id: 2, name: 'coding' },
-    { id: 3, name: 'music' },
-    { id: 4, name: 'unsw' },
-    { id: 5, name: 'reading' },
-    { id: 6, name: 'eating' },
+    { name: 'dance' },
+    { name: 'coding' },
+    { name: 'music' },
+    { name: 'unsw' },
+    { name: 'reading' },
+    { name: 'eating' },
+    { name: 'sleeping' },
   ]);
 
   const reactTags = useRef();
@@ -28,13 +29,24 @@ export default function Tags() {
   );
 
   return (
-    <ReactTags
-      ref={reactTags}
-      tags={tags}
-      suggestions={suggestions}
-      onDelete={onDelete}
-      onAddition={onAddition}
-      allowNew={true}
-    />
+    <>
+      <ReactTags
+        ref={reactTags}
+        tags={tags}
+        suggestions={suggestions}
+        placeholderText='Add your interests'
+        onDelete={onDelete}
+        onAddition={onAddition}
+        allowNew={true}
+        removeButtonText='x'
+        autoresize={true}
+      />
+      <p>
+        <b>Output:</b>
+      </p>
+      <pre>
+        <code>{JSON.stringify(tags, null, 2)}</code>
+      </pre>
+    </>
   );
 }

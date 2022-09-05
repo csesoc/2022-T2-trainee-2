@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import Header from '../../components/Header/Header';
 import UploadImage from '../../components/UploadImage/UploadImage';
 import TextInput from '../../components/TextInput/TextInput';
-import Tags from '../../components/Tags/Tags';
 import StartMatching from '../../components/StartMatching/StartMatching';
-import WeeklyCalendar from '../../components/WeeklyCalendar/WeeklyCalendar';
 
 export default function MainBlock() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -34,8 +32,6 @@ export default function MainBlock() {
         selectedImage={selectedImage}
       />
       <TextInput />
-      <Tags />
-      {/* <WeeklyCalendar /> */}
       <StartMatching onSubmit={onSubmit} />
     </div>
   );
