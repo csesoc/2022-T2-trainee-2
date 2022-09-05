@@ -26,7 +26,7 @@ export default function MainBlock() {
   }
   return (
     <div className='MainBlock'>
-      <Header />
+      <Header title='Tell others about yourself!' />
       <UploadImage
         setSelectedImage={setSelectedImage}
         selectedImage={selectedImage}

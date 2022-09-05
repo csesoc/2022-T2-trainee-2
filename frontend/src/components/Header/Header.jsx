@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './Header.module.css';
 
-export default function Header() {
+export default function Header({ title }) {
   return (
     <div className={styles.Header}>
-      <h1 className="text-3xl font-bold underline">Tell others about yourself!</h1>
+      <h1 className='text-3xl font-bold underline'>{title}</h1>
     </div>
   );
 }
