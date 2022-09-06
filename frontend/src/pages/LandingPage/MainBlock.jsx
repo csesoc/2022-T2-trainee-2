@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './LandingPage.module.css';
 import image from '../../images/loginimage.png';
-import Footer from '../../components/Footer/Footer';
+import Header from '../../components/Header/Header';
 import { Link } from 'react-router-dom';
 // Login
 
@@ -21,22 +21,30 @@ export default function MainBlock() {
   }
   return (
     <div className={styles.MainBlock}>
-      <img src={image} style={{ width: '70%', margins: 'auto' }}></img>
+      <Header title='swipe, match and vibe with your tribe!' />
+      <img
+        src={image}
+        style={{ width: '62%', marginTop: '10px', marginBottom: '20px' }}
+      ></img>
       <form onSubmit={onSubmit}>
         <input className={styles.text} type='text' placeholder='username' />
         <br />
         <input className={styles.text} type='password' placeholder='password' />
-        <button className={styles.Button} type='submit'>
-          {' '}
-          Login{' '}
-        </button>
       </form>
-      <Link to='/profile'>
-        <button className={styles.Button} type='submit'>
-          {' '}
-          Sign Up{' '}
-        </button>
-      </Link>
+      <div className='Buttons'>
+        <Link to='/matching'>
+          <button className={styles.Button} type='submit'>
+            {' '}
+            Login{' '}
+          </button>
+        </Link>
+        <Link to='/profile'>
+          <button className={styles.Button} type='submit'>
+            {' '}
+            Sign Up{' '}
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }

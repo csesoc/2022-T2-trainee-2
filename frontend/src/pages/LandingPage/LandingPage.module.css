@@ -1,14 +1,13 @@
 .MainBlock {
   background-color: #fafafa;
   width: 50%;
-  height: 90vh;
+  height: 105vh;
   margin: auto;
-  margin-top: 5%;
   border-radius: 20px;
   box-shadow: 0px 2px 8px rgba(117, 131, 142, 0.08),
     0px 20px 32px rgba(52, 60, 68, 0.16);
-  display: flexbox;
-  justify-items: center;
+  display: block;
+  text-align: center;
 }
 
 .text {
@@ -18,7 +17,6 @@
   padding: 15px;
   border-radius: 3px;
   border: #85949f solid 1px;
-  margin-left: 60px;
 }
 
 .text:focus {
@@ -33,15 +31,22 @@
   background-color: transparent;
   color: #85949f;
   border-radius: 100px;
-  display: block;
-  margin-right: 3em;
-  margin-left: auto;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .Button:hover {
   background-color: #85949f;
   color: white;
   cursor: pointer;
+}
+
+.Buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 80%;
+  margin-bottom: 20px;
 }
 
 .Logo {
