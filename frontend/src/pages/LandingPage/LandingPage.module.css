@@ -1,7 +1,7 @@
 .MainBlock {
   background-color: #fafafa;
   width: 50%;
-  height: 800px;
+  height: 90vh;
   margin: auto;
   margin-top: 5%;
   border-radius: 20px;
@@ -42,4 +42,8 @@
   background-color: #85949f;
   color: white;
   cursor: pointer;
+}
+
+.Logo {
+  width: 15%;
 }
