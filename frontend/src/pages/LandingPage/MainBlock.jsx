@@ -24,7 +24,7 @@ export default function MainBlock() {
       <Header title='swipe, match and vibe with your tribe!' />
       <img
         src={image}
-        style={{ width: '62%', marginTop: '10px', marginBottom: '20px' }}
+        style={{ width: '64%', marginTop: '20px', marginBottom: '20px' }}
       ></img>
       <form onSubmit={onSubmit}>
         <input className={styles.text} type='text' placeholder='username' />
